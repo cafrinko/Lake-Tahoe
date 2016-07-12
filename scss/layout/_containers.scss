@@ -4,6 +4,16 @@
   @extend %content;
 	padding-top: 25px;
   padding-bottom: 95px;
+
+  @media #{$brk-wide} {
+    width: 90%;
+  }
+
+  @media #{$brk-narrow} {
+    width: 100%;
+    padding: 20px;
+    border-top: none;
+  }
 }
 
 .secondary-content {
@@ -13,6 +23,16 @@
 	padding-top: 80px;
 	padding-bottom: 70px;
   border-bottom: 2px solid $border-grey;
+
+  @media #{$brk-wide} {
+    width: 90%;
+  }
+
+  @media #{$brk-narrow} {
+    width: 100%;
+    padding: 20px;
+    border-top: none;
+  }
 }
 
 .wildlife {
@@ -21,8 +41,13 @@
   padding: 18% 24%;
   border-top: 10px solid $color-prim;
   margin: 105px 0 60px;
-  background: $bear-gradient url('../img/bear.jpg') no-repeat center;
+  background: $bear-gradient url('#{$path-img}/bear.jpg') no-repeat center;
   background-size: cover;
   box-shadow: inset 0 0 50px 10px $color-shadow;
-  border-radius: 10px;
+  border-radius: $br;
+
+  @media #{$brk-wide} {
+    padding: 10% 12%;
+    margin: 50px 0 20px;
+  }
 }
